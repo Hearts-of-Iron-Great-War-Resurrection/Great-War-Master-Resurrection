@@ -1,0 +1,558 @@
+﻿add_namespace = interwar_news
+
+# Hitler Chancellor of Germany
+#____________________________________________________________
+news_event = {
+	id = interwar_news.1
+	title = interwar_news.1.t
+	desc = interwar_news.1.d
+	picture = EVENT_hoi4tgw_hitler_chancellor
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name=interwar_news.1.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+#____________________________________________________________
+
+# The March on Rome (Mussolini)
+#____________________________________________________________
+news_event = {
+	id = interwar_news.2
+	title = interwar_news.2.t
+	desc = interwar_news.2.d
+	picture = EVENT_hoi4tgw_march_on_rome
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = interwar_news.2.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+#____________________________________________________________
+
+# Wall Street Crash
+#____________________________________________________________
+news_event = {
+	id = interwar_news.3
+	title = interwar_news.3.t
+	desc = interwar_news.3.d
+	picture = EVENT_hoi4tgw_1929_wallstreet_crash
+
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	major = yes
+
+	trigger = {
+		date > 1929.10.24
+		NOT = {
+			has_global_flag = interwar_wall_street_crash_1929
+		}
+	}
+
+	immediate = {
+		set_global_flag = interwar_wall_street_crash_1929
+	}
+
+	option = {
+		name = interwar_news.3.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+#____________________________________________________________
+
+# Lenin is dead
+#____________________________________________________________
+news_event = {
+	id = interwar_news.4
+	title = interwar_news.4.t
+	desc = interwar_news.4.d
+	picture = EVENT_hoi4tgw_stalin_replace_lenin
+
+	is_triggered_only = yes
+	major = yes
+
+	trigger = {
+
+		date > 1924.1.20
+
+		NOT = {
+			has_global_flag = interwar_lenin_is_dead
+		}
+
+		OR = {
+			RUS = {
+				has_government = communism
+			}
+
+			SOV = {
+				has_government = communism
+			}
+		}
+	}
+
+	immediate = {
+		set_global_flag = interwar_lenin_is_dead
+		hidden_effect = {
+			SOV = {
+				kill_country_leader = yes
+				create_country_leader={ name = "Josef Stalin" desc=SOV_josef_stalin_DESC picture="gfx/leaders/SOV_josef_stalin.dds" expire="1935.1.1" ideology=stalinism traits={  } }
+				set_politics = {
+				    parties = {
+				        neutrality = {
+				            popularity = 0
+				        }
+				        fascism = {
+				            popularity = 0
+				        }
+				        democratic = {
+				            popularity = 0
+				        }
+				        communism = {
+				            popularity = 100
+				        }
+				    }
+				    ruling_party = communism last_election = "1911.7.1"
+				    election_frequency = 48 elections_allowed = no
+				}
+			}
+			RUS = {
+				kill_country_leader = yes
+				create_country_leader={ name = "Josef Stalin" desc=SOV_josef_stalin_DESC picture="gfx/leaders/SOV_josef_stalin.dds" expire="1935.1.1" ideology=stalinism traits={  } }
+				set_politics = {
+				    parties = {
+				        neutrality = {
+				            popularity = 0
+				        }
+				        fascism = {
+				            popularity = 0
+				        }
+				        democratic = {
+				            popularity = 0
+				        }
+				        communism = {
+				            popularity = 100
+				        }
+				    }
+				    ruling_party = communism last_election = "1911.7.1"
+				    election_frequency = 48 elections_allowed = no
+				}
+			}
+		}
+	}
+
+	option = {
+		name = interwar_news.4.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+#____________________________________________________________
+
+# Revolution in Egypt
+#____________________________________________________________
+news_event = {
+	id = interwar_news.5
+	title = interwar_news.5.t
+	desc = interwar_news.5.d
+
+	picture = EVENT_hoi4tgw_albanian_revolt #
+
+	is_triggered_only = yes
+	major = yes
+
+	trigger = {
+		date > 1919.1.1
+		has_global_flag = kis_treaty_of_versailles
+		ENG = { has_war = no }
+		NOT={
+			country_exists=EGY
+			has_global_flag = interwar_revolution_egypt
+		}
+		ENG = { 
+			controls_state = 551 
+		}
+	}
+
+	immediate = {
+		set_global_flag = interwar_revolution_egypt
+		hidden_effect = {
+			EGY = {
+				transfer_state = 446
+				transfer_state = 447
+			}
+			ENG = {
+				end_puppet = EGY
+				remove_from_faction = EGY
+				declare_war_on={
+					target=EGY
+					type = annex_everything
+				}
+			}
+		}
+	}
+
+	option = {
+		name = interwar_news.5.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+#____________________________________________________________
+
+# Polish–Soviet War
+#____________________________________________________________
+news_event = {
+	id = interwar_news.6
+	title = interwar_news.6.t
+	desc = interwar_news.6.d
+
+	picture = EVENT_hoi4tgw_polish_soviet_war # TEMP 0.1.6
+
+	is_triggered_only = yes
+	major = yes
+
+	trigger = {
+		date > 1919.2.2
+		has_global_flag = kis_treaty_of_versailles
+		SOV = { has_war = no }
+		country_exists=POL
+		country_exists=SOV
+
+		NOT={
+			has_global_flag = interwar_polish_soviet_war
+		}
+	}
+
+	immediate = {
+		set_global_flag = interwar_polish_soviet_war
+		hidden_effect = {
+
+			SOV={
+				puppet = UKR
+
+				declare_war_on={
+						target=POL
+						type = annex_everything
+				}
+			}
+			POL={
+				add_manpower = 250000
+			}
+
+		}
+	}
+
+	option = {
+		name = interwar_news.6.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+#____________________________________________________________
+
+# Second Spanish Republic
+#____________________________________________________________
+news_event = {
+	id = interwar_news.7
+	title = interwar_news.7.t
+	desc = interwar_news.7.d
+
+	picture = EVENT_hoi4tgw_second_spanish_republic
+
+	major = yes
+
+	trigger = {
+		date > 1931.4.14
+		NOT = { has_global_flag = interwar_second_spanish_republic }
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	immediate = {
+		set_global_flag = interwar_second_spanish_republic
+		hidden_effect = {
+			SPR = {
+				kill_country_leader = yes
+
+				create_country_leader = {
+					name = "Niceto Alcalá-Zamora"
+					desc = "POLITICS_Niceto_DESC"
+					picture = "gfx/hoi4tgw_portraits/SPR/country_leaders/SPR_niceto_alcala-zamora.dds"
+					expire = "1965.1.1"
+					ideology = marxism
+					traits = { }
+				}
+				
+				set_politics = {
+				    parties = {
+				        neutrality = {
+				            popularity = 20
+				        }
+				        fascism = {
+				            popularity = 2
+				        }
+				        democratic = {
+				            popularity = 8
+				        }
+				        communism = {
+				            popularity = 70
+				        }
+				    }
+				    ruling_party = communism last_election = "1931.4.14"
+				    election_frequency = 48 
+				    elections_allowed = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = interwar_news.7.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+#____________________________________________________________
+
+
+# The Turkish National Movement # Open Beta 0.5
+#____________________________________________________________
+news_event = {
+	id = interwar_news.8
+	title = interwar_news.8.t
+	desc = interwar_news.8.d
+
+	picture = EVENT_hoi4tgw_turkish_national_movement
+
+	major = yes
+
+	trigger = {
+		date > 1919.5.5
+		has_global_flag = kis_treaty_of_versailles
+		NOT = { has_global_flag = interwar_turkish_national_movement }
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	immediate = {
+		set_global_flag = interwar_turkish_national_movement
+		hidden_effect = {
+
+			GRE = {
+				country_event = { id = ww1_greece.6 }
+			}
+
+			TUR = {
+				start_civil_war = {
+					ruling_party = democratic
+					ideology = neutrality
+					size = 0.5
+					capital = 49
+					states = { 49 348 346 345 355}
+				}
+
+				#load_oob = "TUR_1919"
+				create_country_leader={ name = "Mustafa Kemal" desc=TUR_mustafa_kemal_DESC picture="gfx/hoi4tgw_portraits/TUR/country_leaders/TUR_mustafa_kemal.dds" expire="1935.1.1" ideology=liberalism  traits={  } }
+			}
+
+		}
+	}
+
+	option = {
+		name = interwar_news.8.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+#____________________________________________________________
+
+
+# The Greco-Turkish War # Open Beta 0.5
+#____________________________________________________________
+news_event = {
+	id = interwar_news.9
+	title = interwar_news.9.t
+	desc = interwar_news.9.d
+
+	picture = EVENT_hoi4tgw_greco_turkish_war
+
+	major = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_global_flag = interwar_greco_turkish_war }
+	}
+
+	immediate = {
+		set_global_flag = interwar_greco_turkish_war
+	}
+
+	option = {
+		name = interwar_news.9.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+#____________________________________________________________
+
+
+# Treaty of Lausanne # Open Beta 0.5
+#____________________________________________________________
+news_event = {
+	id = interwar_news.10
+	title = interwar_news.10.t
+	desc = interwar_news.10.d
+
+	picture = EVENT_hoi4tgw_interwar_treaty_of_lausanne
+
+	major = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_global_flag = interwar_treaty_of_lausanne }
+	}
+
+	immediate = {
+		set_global_flag = interwar_treaty_of_lausanne
+	}
+
+	option = {
+		name = interwar_news.10.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+#____________________________________________________________
+
+
+
+# Irish War of Independence # Open Beta 0.5
+#____________________________________________________________
+news_event = {
+	id = interwar_news.11
+	title = interwar_news.11.t
+	desc = interwar_news.11.d
+
+	picture = EVENT_hoi4tgw_interwar_irish_war_of_independence
+
+	major = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_global_flag = interwar_irish_war_of_independence }
+	}
+
+	immediate = {
+		set_global_flag = interwar_irish_war_of_independence
+
+		hidden_effect = {
+
+			IRE = {
+				transfer_state = 113
+			}
+
+			ENG = {
+				declare_war_on = {
+				    type = annex_everything 
+				    target = IRE
+				}
+			}
+		}
+
+	}
+
+	option = {
+		name = interwar_news.11.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+#____________________________________________________________
+
+
+
+
+# Irish Free State # Open Beta 0.5
+#____________________________________________________________
+news_event = {
+	id = interwar_news.12
+	title = interwar_news.12.t
+	desc = interwar_news.12.d
+
+	picture = EVENT_hoi4tgw_interwar_irish_free_state
+
+	major = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_global_flag = interwar_irish_free_state }
+	}
+
+	immediate = {
+		set_global_flag = interwar_irish_free_state
+	}
+
+	option = {
+		name = interwar_news.12.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+#____________________________________________________________
+
+
+# The Locarno_Treaties # Open Beta 0.5.1 (03/2018)
+#____________________________________________________________
+news_event = {
+	id = interwar_news.13
+	title = interwar_news.13.t
+	desc = interwar_news.13.d
+
+	picture = EVENT_hoi4tgw_interwar_locarno_treaties
+
+	major = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_global_flag = interwar_locarno_treaties }
+	}
+
+	immediate = {
+		set_global_flag = interwar_locarno_treaties
+	}
+
+	option = {
+		name = interwar_news.13.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+#____________________________________________________________
