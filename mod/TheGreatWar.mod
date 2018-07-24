@@ -1,5 +1,5 @@
-﻿name="Hearts of Iron IV: The Great War"
-path="mod/thegreatwar/"
+﻿name="Hearts of Iron IV: The Great War Ressurected"
+path="mod/thegreatwarressurection/"
 tags={
 	"Historical"
 	"Graphics"
