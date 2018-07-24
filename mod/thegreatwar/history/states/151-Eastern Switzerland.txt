@@ -1,28 +1,37 @@
+
 state={
 	id=151
 	name="STATE_151"
-	manpower = 1854711
-	state_category=city
-	provinces={ 658 661 663 3641 3660 3662 9600 11601 11623 }
+	manpower = 2320000
+
+	state_category = large_city
+
 	resources={
-		steel=10
-		}
-	history={
-		victory_points={ 663 10 }
-		owner=SWI
-		add_core_of=SWI
-		1936.1.1={ 
-			owner=SWI
-			add_core_of=SWI
-			victory_points={ 663 10 }
-			buildings={
-				infrastructure=6
-				industrial_complex=3
-				}
-			}
-		buildings={
-			infrastructure=6
-			industrial_complex=3
-			}
-		}
+		aluminium=25
 	}
+
+	history={
+		owner = SWI
+		add_core_of = SWI
+
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+			arms_factory = 3
+			air_base = 1
+		}
+
+		victory_points = {
+			9620 15
+		}
+
+		victory_points = {
+			663 10
+		}
+
+	}
+
+	provinces={
+		636 661 663 3660 9618 9587 9620 9638 11601 11623 11604
+	}
+}

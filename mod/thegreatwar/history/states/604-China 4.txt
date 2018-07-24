@@ -13,6 +13,7 @@ state={
 		owner=QIN
 		add_core_of=QIN
 		add_core_of=CHI
+		add_core_of=XSM
 		#add_core_of=PRC
 		1912.2.12={ owner=CHI }
 		1936.1.1={ 
@@ -24,15 +25,15 @@ state={
 			victory_points={ 12732 3 }
 			buildings={
 				infrastructure=1
-				industrial_complex=3
-				arms_factory=1
+				industrial_complex=2
+				arms_factory=0
 				}
 			}
 		1938.10.25={ owner=CHI }
 		buildings={
 			infrastructure=1
-			industrial_complex=3
-			arms_factory=1
+			industrial_complex=0
+			arms_factory=0
 			}
 		}
 	}

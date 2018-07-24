@@ -277,7 +277,7 @@ country_event = {
 				controls_state = 757
 				controls_state = 760
 				controls_state = 761
-				controls_state = 779
+				controls_state = 762
 			}
 		}
 	}
@@ -313,7 +313,7 @@ country_event = {
 				transfer_state = 756
 				transfer_state = 757
 				transfer_state = 759
-				transfer_state = 779
+				transfer_state = 762
 			}
 			MTN = {
 				transfer_state = 761
@@ -362,6 +362,7 @@ country_event = {
 		GRE = {
 			transfer_state = 731
 			transfer_state = 758
+			transfer_state = 182
 			transfer_state = 764			
 			add_state_core = 731
 			add_state_core = 758

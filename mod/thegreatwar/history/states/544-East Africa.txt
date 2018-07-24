@@ -13,7 +13,6 @@ state={
 		add_core_of=POR
 		1936.1.1={ 
 			owner=POR
-			add_core_of=POR
 			victory_points={ 8245 1 }
 			buildings={
 				infrastructure=3

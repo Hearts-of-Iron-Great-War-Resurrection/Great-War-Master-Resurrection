@@ -3,9 +3,9 @@ state={
 	name="STATE_539"
 	manpower = 2564000
 	state_category=rural
-	provinces={ 2080 5036 5054 6039 9137 }
+	provinces={ 2080 5036 5054 6039 9137 11194 1993 7963 }
 	resources={
-		wood=39
+		wood=40
 		}
 	history={
 		owner=GER

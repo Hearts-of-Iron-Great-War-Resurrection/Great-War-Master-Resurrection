@@ -1,0 +1,34 @@
+
+state = {
+	id = 788
+	name = "STATE_788"
+
+	history = {
+		owner = FRA
+
+		add_core_of = FRA
+		buildings = {
+			infrastructure = 7
+		
+			industrial_complex = 3
+			arms_factory = 1
+
+		}
+		victory_points = {
+			5291 5
+		}
+
+	}
+
+	resources = {
+		wood = 8
+		coal = 3
+	}
+
+
+	provinces = {
+		3546 3560 5291 6545 11488 11642 9505
+	}
+	manpower = 711632
+	state_category = city
+}

@@ -11,6 +11,7 @@ state={
 		victory_points={ 3838 1 }
 		owner=FRA
 		add_core_of=FRA
+		add_claim_by=ITA
 		1936.1.1={ 
 			owner=FRA
 			add_core_of=FRA

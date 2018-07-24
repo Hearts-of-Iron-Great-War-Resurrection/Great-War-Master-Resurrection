@@ -386,11 +386,6 @@ news_event = {
 			}
 
 			#Dirty Code but only way for now...
-
-			AUH = { white_peace = SER }
-			GER = { white_peace = SER }
-
-
 			#GER = { white_peace = FRA }
 			#GER = { white_peace = ENG }
 			#GER = { white_peace = RUS }
@@ -542,14 +537,26 @@ news_event = {
 				transfer_state = 664
 				transfer_state = 73
 				transfer_state = 71
+				transfer_state = 70
+				transfer_state = 72
+				transfer_state = 75
+				transfer_state = 9
+				transfer_state = 69
+				transfer_state = 74
+
 			}
 
 			ROM = {
 				transfer_state = 78
+				transfer_state = 80
+				transfer_state = 84
 			}
 
 			ITA = {
 				transfer_state = 163
+				transfer_state = 39
+				transfer_state = 736
+
 			}
 
 			SER = {
@@ -618,6 +625,7 @@ news_event = {
 				transfer_state = 97
 				transfer_state = 95
 				transfer_state = 96
+				transfer_state = 762
 			}
 			
 			GER = {

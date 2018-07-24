@@ -7,9 +7,9 @@ state={
 	resources={
 		wood=10
 		aluminium=4
-		chromium=2
-		steel=6
-		tungsten=3
+		chromium=3
+		steel=10
+		tungsten=5
 		}
 	history={
 		victory_points={ 6788 10 }

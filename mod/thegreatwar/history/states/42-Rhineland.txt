@@ -1,9 +1,9 @@
 state={
 	id=42
 	name="STATE_42"
-	manpower = 3027739
+	manpower = 3029739
 	state_category=metropolis
-	provinces={ 563 3423 3558 9575 11435 11470 11494 11531 11547 }
+	provinces={ 563 3423 3558 9575 11435 11470 11494 11531 11547 11560 }
 	resources={
 		wood=42
 		coal=310
@@ -29,11 +29,7 @@ state={
 		buildings={
 			infrastructure=7
 			industrial_complex=3
-			3558 = { trench = 5 }
-			563 = { trench = 5 }
-			11531 = { trench = 5 }
-			9575 = { trench = 5 }
-			11435 = { trench = 5 }
+
 			}
 		}
 	}

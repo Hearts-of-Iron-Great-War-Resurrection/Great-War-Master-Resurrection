@@ -1,0 +1,22 @@
+
+state = {
+	id = 780
+	name = "STATE_780" #Desert
+
+	history = {
+		owner = FRA
+
+		buildings = {
+			infrastructure = 1
+
+		}
+
+	}
+
+	provinces = {
+		12842 2049 5035 8077 8061 4903 12711 10731 8088 1958
+	}
+	manpower = 102354
+	buildings_max_level_factor = 1
+	state_category = "wasteland"
+}

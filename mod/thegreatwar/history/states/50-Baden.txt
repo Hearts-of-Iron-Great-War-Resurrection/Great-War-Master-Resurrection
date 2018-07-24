@@ -29,10 +29,7 @@ state={
 			infrastructure=8
 			industrial_complex=2
 			arms_factory=3
-			11640 = { trench = 3 }
-			6712 = { trench = 3 }
-			6542 = { trench = 3 }
-			3530 = { trench = 3 }
+			
 			}
 		}
 	}

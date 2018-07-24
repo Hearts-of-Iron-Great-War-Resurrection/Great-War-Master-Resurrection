@@ -40,9 +40,6 @@ technologies = {
 		recon = {
 			recon = 1
 		}
-		air_superiority_detect_factor = 0.05
-
-
 		
 		path = {
 			leads_to_tech = ww1_camera3
@@ -236,7 +233,7 @@ technologies = {
 	
 		enable_building = {
 			building = trench
-			level = 2
+			level = 1
 		}
 		
 		path = {
@@ -249,7 +246,7 @@ technologies = {
 
 		folder = {
 			name = industry_folder
-			position = { x = 1 y = 0 }
+			position = { x = 0 y = 0 }
 		}
 		
 		ai_will_do = {
@@ -265,7 +262,7 @@ technologies = {
 	
 		enable_building = {
 			building = trench
-			level = 6
+			level = 10
 		}
 		
 		path = {
@@ -292,13 +289,8 @@ technologies = {
 
 	ww1_fortification3 = {
 	
-		production_speed_buildings_factor = 0.01
-
-		enable_building = {
-			building = trench
-			level = 10
-		}
-
+		production_speed_buildings_factor = 0.02
+		
 		path = {
 			leads_to_tech = ww1_fortification4
 			research_cost_coeff = 1
@@ -308,7 +300,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 	
-		research_cost = 2
+		research_cost = 1.5
 		start_year = 1916
 
 		folder = {
@@ -329,12 +321,7 @@ technologies = {
 	
 		enable_building = {
 			building = bunker
-			level = 3
-		}
-
-		path = {
-			leads_to_tech = ww1_fortification5
-			research_cost_coeff = 1
+			level = 10
 		}
 	
 		research_cost = 1.5
@@ -377,62 +364,6 @@ technologies = {
 			industry
 		}
 	}
-
-	ww1_fortification5 = {
-	
-		path = {
-			leads_to_tech = ww1_fortification6
-			research_cost_coeff = 1
-		}
-
-
-		enable_building = {
-			building = bunker
-			level = 6
-		}
-	
-		research_cost = 1.5
-		start_year = 1922
-
-		folder = {
-			name = industry_folder
-			position = { x = 2 y = 6 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-		
-		categories = {
-			industry
-		}
-	}
-
-	ww1_fortification6 = {
-	
-		enable_building = {
-			building = bunker
-			level = 10
-		}
-	
-		research_cost = 1.5
-		start_year = 1936
-
-		folder = {
-			name = industry_folder
-			position = { x = 2 y = 8 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-		
-		categories = {
-			industry
-		}
-	}
-
-
 #======================================================================
 
 
@@ -1286,10 +1217,10 @@ technologies = {
 
 #WW1
 
-	ww1_oil1 = {
+	ww1_oil1 = { #We will have to change in later version the "production_oil_factor"
 	
-		local_resources_factor = 0.02
-		production_oil_factor = 0.01
+		local_resources_factor = 0.03
+		production_oil_factor = 0.02 #Can increase oil output - not used though.
 		
 		path = {
 			leads_to_tech = ww1_oil2
@@ -1301,7 +1232,7 @@ technologies = {
 
 		folder = {
 			name = industry_folder
-			position = { x = -1 y = 0 }
+			position = { x = 0 y = 0 }
 		}
 		
 		categories = {
@@ -1313,10 +1244,10 @@ technologies = {
 		}
 	}
 
-	ww1_oil2 = {
+	ww1_oil2 = { #We will have to change in later version the "production_oil_factor"
 	
 		local_resources_factor = 0.03
-		production_oil_factor = 0.02
+		production_oil_factor = 0.02 #Can increase oil output - not used though.
 		
 		path = {
 			leads_to_tech = ww1_oil3
@@ -1328,7 +1259,7 @@ technologies = {
 
 		folder = {
 			name = industry_folder
-			position = { x = -1 y = 2 }
+			position = { x = 0 y = 2 }
 		}
 		
 		categories = {
@@ -1340,44 +1271,14 @@ technologies = {
 		}
 	}
 
-	ww1_oil3 = {
+	ww1_oil3 = { #We will have to change in later version the "production_oil_factor"
 	
 		local_resources_factor = 0.03
-		production_oil_factor = 0.02
+		production_oil_factor = 0.02 #Can increase oil output - not used though.
 		
 		research_cost = 2
 		start_year = 1916
 
-		folder = {
-			name = industry_folder
-			position = { x = -1 y = 6 }
-		}
-		
-		categories = {
-			industry
-		}
-		
-		ai_will_do = {
-			factor = 0.5			
-		}
-	}
-
-
-	
-	ww1_bergiusprocess = {
-
-		enable_building = {
-			building = synthetic_refinery
-			level = 1
-		}
-		
-		path = {
-			leads_to_tech = synth_oil_experiments 
-			research_cost_coeff = 1
-		}
-		
-		research_cost = 5
-		start_year = 1916
 		folder = {
 			name = industry_folder
 			position = { x = 0 y = 4 }
@@ -1385,39 +1286,38 @@ technologies = {
 		
 		categories = {
 			industry
-			synth_resources
 		}
 		
-		ai_will_do = { 
-			factor = 0 
-			modifier = {
-				factor = 2000
-				date > 1919.1.1
-			}
-		}
-		
-		ai_research_weights = {
-			oil = -2.0
+		ai_will_do = {
+			factor = 0.5			
 		}
 	}
 
 
-	synth_oil_experiments = {
 
-		start_year = 1936
+
+
+
+
+
+
+	
+	synth_oil_experiments = {
 
 		enable_building = {
 			building = synthetic_refinery
-			level = 2
+			level = 1
 		}
+		
+		#production_oil_factor = 0.1 #Can increase oil output - not used though.
 		
 		path = {
 			leads_to_tech = oil_plant 
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
-		
+		research_cost = 3
+		start_year = 1936
 		folder = {
 			name = industry_folder
 			position = { x = 0 y = 8 }
@@ -1429,7 +1329,19 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1			
+			factor = 1
+			modifier = {
+				factor = 0.5
+				oil > 10
+			}
+			modifier = {
+				factor = 0.5
+				oil > 20
+			}	
+			modifier = {
+				factor = 0.5
+				oil > 30
+			}			
 		}
 		
 		ai_research_weights = {
@@ -1443,7 +1355,7 @@ technologies = {
 
 		enable_building = {
 			building = synthetic_refinery
-			level = 3
+			level = 2
 		}
 		
 		path = {
@@ -1488,7 +1400,7 @@ technologies = {
 
 		enable_building = {
 			building = synthetic_refinery
-			level = 4
+			level = 3
 		}
 		
 		path = {
@@ -1534,7 +1446,7 @@ technologies = {
 
 		enable_building = {
 			building = synthetic_refinery
-			level = 5
+			level = 4
 		}
 		
 		path = {

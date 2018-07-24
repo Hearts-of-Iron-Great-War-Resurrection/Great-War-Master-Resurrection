@@ -259,7 +259,7 @@ news_event = {
 		ai_chance = { factor = 100 }
 	}
 	option = {
-	name = ww1_russia.4.b
+	name = "What happens now? (play as Soviets)"
 	trigger = { tag = RUS NOT = { tag = SOV } }
 	ai_chance = { factor = 0 }
 	    SOV = {
@@ -267,7 +267,7 @@ news_event = {
 		}
 	}
 	option = {
-		name = ww1_russia.4.c
+		name = "What happens now?"
 		trigger = { NOT = { tag = SOV tag = RUS } }
 		ai_chance = { factor = 100 }
 	}
@@ -453,7 +453,7 @@ news_event = {
 	}
 	
 	option = {
-		name = ww1_russia.6.a
+		name = "The October Revolution is Successful!"
 		ai_chance = { factor = 100 }
 	}
 }

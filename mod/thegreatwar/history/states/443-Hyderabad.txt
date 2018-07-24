@@ -10,6 +10,7 @@ state={
 	history={
 		victory_points={ 3456 3 }
 		owner=RAJ
+		add_core_of=PAK
 		1936.1.1={ 
 			owner=RAJ
 			victory_points={ 3456 3 }

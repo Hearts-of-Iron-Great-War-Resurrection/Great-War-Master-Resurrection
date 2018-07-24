@@ -40,14 +40,6 @@ state={
 		buildings={
 			infrastructure=7
 			industrial_complex=2
-			549 = { trench = 6 }
-			678 = { trench = 6 }
-			3629 = { trench = 6 }
-			6529 = { trench = 6 }
-			9503 = { trench = 6 }
-			9559 = { trench = 6 }
-			11502 = { trench = 6 }
-			1346 = { trench = 6 }
 			}
 		}
 	}

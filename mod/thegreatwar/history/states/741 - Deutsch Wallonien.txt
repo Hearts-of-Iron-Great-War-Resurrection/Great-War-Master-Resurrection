@@ -1,0 +1,33 @@
+
+
+state = {
+	id = 774
+	name = "STATE_774"
+	manpower = 217684
+	resources = {
+		steel = 4
+	}
+	state_category = city
+
+	history = {
+		owner = BEL
+		add_core_of = BEL
+		add_claim_by = GER
+
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 1
+			9418 = {
+				bunker = 3
+			}
+			11407 = {
+				bunker = 2
+			}
+		}
+	}
+
+	provinces = {
+		11407 9418
+	}
+}

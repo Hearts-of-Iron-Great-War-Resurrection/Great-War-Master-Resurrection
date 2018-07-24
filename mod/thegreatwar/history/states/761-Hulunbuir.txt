@@ -9,7 +9,7 @@ state={
 		}
 	history={
 		owner=TUR
-		add_claim_by=MTN
+		add_core_of=MTN
 		1913.5.30 = { owner = MTN  }
 		1936.1.1={ owner=YUG }
 		buildings={

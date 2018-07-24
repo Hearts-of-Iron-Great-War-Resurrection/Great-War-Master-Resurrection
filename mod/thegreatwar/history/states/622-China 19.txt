@@ -25,7 +25,7 @@ state={
 			victory_points={ 8049 3 }
 			buildings={
 				infrastructure=2
-				industrial_complex=2
+				industrial_complex=
 				arms_factory=4
 				10733={ bunker=2 }
 				12156={ bunker=2 }
@@ -34,8 +34,8 @@ state={
 			}
 		buildings={
 			infrastructure=2
-			industrial_complex=5
-			arms_factory=1
+			industrial_complex=1
+			arms_factory=0
 			10733={ bunker=2 }
 			12156={ bunker=2 }
 			5007={ bunker=2 }

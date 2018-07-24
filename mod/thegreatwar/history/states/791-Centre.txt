@@ -1,0 +1,30 @@
+
+state = {
+	id = 791
+	name = "STATE_791"
+	resources = {
+		steel = 48
+		aluminium = 18
+		wood = 6
+		coal = 13
+	}
+
+	history = {
+		owner = FRA
+		add_core_of = FRA
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 1
+
+
+		}
+
+	}
+
+	provinces = {
+		454 3402 3447 6585 9561 11420 11549 9472
+	}
+	manpower = 1353648
+	buildings_max_level_factor = 1
+	state_category = city
+}

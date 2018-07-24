@@ -16,10 +16,10 @@ state={
 		1913.5.30={
 				owner=ALB
 
-			buildings={
+				}
+				buildings={
 				infrastructure=1
 
-				}
 
 }
 	}
